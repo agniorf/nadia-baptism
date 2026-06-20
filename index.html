@@ -204,6 +204,16 @@
     .two-col{grid-template-columns:1fr}
     .checks{flex-direction:column}.fam-grid{gap:34px}
   }
+
+  /* Greek (Literata) sits larger than Latin (Cormorant) at the same size — scale to match */
+  html[lang="el"] .hero-pre{font-size:clamp(1.42rem,4.27vw,2.31rem)}
+  html[lang="el"] .babyname{font-size:clamp(3.38rem,14.24vw,7.12rem)}
+  html[lang="el"] .hero-meta{font-size:clamp(1.16rem,3.38vw,1.6rem)}
+  html[lang="el"] .sec-title{font-size:clamp(2.14rem,5.79vw,3.29rem)}
+  html[lang="el"] .card h3{font-size:1.87rem}
+  html[lang="el"] .fam-col .names{font-size:2.05rem}
+  html[lang="el"] .success h3{font-size:2.05rem}
+  html[lang="el"] footer .fname{font-size:2.31rem}
 </style>
 </head>
 <body>
@@ -278,7 +288,6 @@
   </section>
 
   <section class="family reveal">
-    <p class="eyebrow" data-i18n="fam_eyebrow"></p>
     <div class="fam-grid">
       <div class="fam-col">
         <p class="label" data-i18n="fam_parents_label"></p>
