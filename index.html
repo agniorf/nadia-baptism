@@ -6,10 +6,10 @@
 <title>el Bautizo de Nadia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --disp:"Cormorant Garamond";
+    --disp:"Literata";
     --ink:#2b2c54;
     --ink-soft:#54557e;
     --indigo:#5b5fae;
@@ -205,15 +205,6 @@
     .checks{flex-direction:column}.fam-grid{gap:34px}
   }
 
-  /* Greek (Literata) sits larger than Latin (Cormorant) at the same size — scale to match */
-  html[lang="el"] .hero-pre{font-size:clamp(1.42rem,4.27vw,2.31rem)}
-  html[lang="el"] .babyname{font-size:clamp(3.38rem,14.24vw,7.12rem)}
-  html[lang="el"] .hero-meta{font-size:clamp(1.16rem,3.38vw,1.6rem)}
-  html[lang="el"] .sec-title{font-size:clamp(2.14rem,5.79vw,3.29rem)}
-  html[lang="el"] .card h3{font-size:1.87rem}
-  html[lang="el"] .fam-col .names{font-size:2.05rem}
-  html[lang="el"] .success h3{font-size:2.05rem}
-  html[lang="el"] footer .fname{font-size:2.31rem}
 </style>
 </head>
 <body>
@@ -234,8 +225,8 @@
   <div class="monogram" id="navMono">N<span>.</span></div>
   <nav class="lang" aria-label="Language">
     <button data-lang="el" type="button">ΕΛ</button>
-    <button data-lang="en" type="button">EN</button>
     <button data-lang="es" type="button">ES</button>
+    <button data-lang="en" type="button">EN</button>
   </nav>
 </header>
 
@@ -493,7 +484,6 @@ function applyConfig(){
 function setLang(l){
   lang=l; const t=I18N[l];
   document.documentElement.lang=l;
-  document.documentElement.style.setProperty("--disp", l==="el" ? '"Literata"' : '"Cormorant Garamond"');
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const k=el.getAttribute("data-i18n");
     if(typeof t[k]==="string") el.textContent=t[k];
